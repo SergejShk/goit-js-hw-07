@@ -22,13 +22,4 @@ const imageMarkup = createImageMarkup(galleryItems);
 
 galleryListRef.insertAdjacentHTML("beforeend", imageMarkup);
 
-const onClickImage = (evt) => {
-  evt.preventDefault();
-
-  if (evt.target.nodeName !== "IMG") {
-    return;
-  }
-};
 new SimpleLightbox(".gallery a", { captionsData: "alt", captionDelay: "250" });
-
-galleryListRef.addEventListener("click", onClickImage);
